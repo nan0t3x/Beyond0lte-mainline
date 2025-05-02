@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (c) 2024, J0SH1X <aljoshua.hell0@gmail.com>
+ * Copyright (C) 2024, Tim Zimmermann <tim@linux4.de>
+ */
+
+/dts-v1/;
+
+#include "exynos9820.dtsi"
+
+/ {
+	model = "Samsung Galaxy S10e";
+	compatible = "samsung,beyond0lte", "samsung,beyond0lte";
+
+	memory@80000000 {
+		device_type = "memory";
+		reg = <0x0 0x90000000 0x60000000>;
+	};
+
+	chosen {
+		bootargs = "earlycon=simplefb,0xCA000000,2280x1080x32 console=simplefb";
+	};
+
+};
